@@ -16,8 +16,8 @@ public class CannonController : MonoBehaviour {
     public string joystickVertical;
     public string joystickHorizontal;
     public AudioClip clip;
-    private AudioSource audioSource;
 
+    private AudioSource audioSource;
     private Vector2 startPos;
     private Transform thisTransform;
     private Vector2 inputDirection;
@@ -25,6 +25,7 @@ public class CannonController : MonoBehaviour {
     public float angle;
     private bulletManager bulletManager;
     private Vector3 lastDir;
+    private int fire;
     
     GameObject[] bullets;
     int lastBullet = 0;
@@ -41,10 +42,10 @@ public class CannonController : MonoBehaviour {
 
         thisTransform = transform;
         startPos = player.transform.position + 2 * thisTransform.position;
-        fireRate = 10;
         Vector2 inputDirection = Vector2.zero;
         Vector2 velocityVector = Vector2.zero;
         audioSource = GetComponent<AudioSource>();
+        fire = fireRate;
 
         Vector3 NextDir = new Vector3(startX, startY, 0);
         lastDir = Vector3.zero;
@@ -55,6 +56,7 @@ public class CannonController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        
         Vector3 NextDir = new Vector3(Input.GetAxis(joystickHorizontal), Input.GetAxis(joystickVertical), 0);
         if (NextDir != Vector3.zero)
         {
@@ -62,7 +64,7 @@ public class CannonController : MonoBehaviour {
             angle = Mathf.Atan2(NextDir.y, NextDir.x) * Mathf.Rad2Deg;
         }
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        if (Input.GetButton(fireButton) && fireRate <= 0)
+        if (Input.GetButton(fireButton) && fire <= 0)
         {
             if (NextDir != Vector3.zero)
             {
@@ -74,7 +76,7 @@ public class CannonController : MonoBehaviour {
                 velocityVector.x += -lastDir.x * 2;
                 velocityVector.y += -lastDir.y * 2;
             }
-            fireRate = 15;
+            fire = fireRate;
             makeBullet();
             anim.Play("fire");
             audioSource.PlayOneShot(clip);
@@ -86,8 +88,8 @@ public class CannonController : MonoBehaviour {
                 velocityVector = velocityVector + new Vector2(-velocityVector.x / 50, -velocityVector.y / 50);
             }
         }
-        player.transform.position = player.transform.position + new Vector3(velocityVector.x, velocityVector.y);
-        fireRate--;
+        player.transform.position = player.transform.position + new Vector3(velocityVector.x, velocityVector.y) /20;
+        fire--;
         if(Input.GetButton("SelectButton"))
         {
             SceneManager.LoadScene("Menu");

@@ -1,0 +1,21 @@
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.PlaymodeTestsRunner.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.VR.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.PlaymodeTestsRunner.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEngine.VR.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Documents\Weapons Nominal\Temp\UnityVS_obj\Debug\Weapons Nominal.CSharp.csprojResolveAssemblyReference.cache
+E:\Documents\Weapons Nominal\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+E:\Documents\Weapons Nominal\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb

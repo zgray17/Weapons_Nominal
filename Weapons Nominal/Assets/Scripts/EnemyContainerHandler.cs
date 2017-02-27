@@ -12,7 +12,8 @@ public class EnemyContainerHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(transform.position.x - player.position.x, transform.position.y - player.position.y) * -1);
+        rb.AddForce(new Vector3(transform.position.x - player.position.x, transform.position.y - player.position.y) / -5);
+        Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>());
     }
 
     void OnCollisionEnter()

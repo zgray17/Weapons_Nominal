@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ThreePlayerSceneTest.unity
+- path: Assets/Scenes/ThreePlayerScene.unity
   isLoaded: 1
   isActive: 1

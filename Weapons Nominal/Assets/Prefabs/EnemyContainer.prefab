@@ -20,11 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4454741976350500}
   - component: {fileID: 212871375331719322}
-  - component: {fileID: 50477848474930080}
   - component: {fileID: 114798963887294758}
-  - component: {fileID: 60149483879191322}
-  - component: {fileID: 61509173739075822}
   - component: {fileID: 114523355287645688}
+  - component: {fileID: 60885640949058778}
+  - component: {fileID: 50950516362472654}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: EnemyA
@@ -69,15 +68,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689188306577928}
-  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 629, y: 279, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -90.256, y: -431.78, z: 0}
   m_LocalScale: {x: 349.05417, y: 350.74722, z: 0}
   m_Children:
   - {fileID: 4454741976350500}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!50 &50477848474930080
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!50 &50950516362472654
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -90,13 +89,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!54 &54672012009339772
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -105,14 +104,14 @@ Rigidbody:
   m_GameObject: {fileID: 1689188306577928}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.05
+  m_AngularDrag: 0.2
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!60 &60149483879191322
+--- !u!60 &60885640949058778
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,26 +125,67 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.08, y: 0.08}
-      - {x: -0.08, y: -0.08}
-      - {x: 0.074999996, y: -0.08}
-      - {x: 0.08, y: -0.06}
-      - {x: 0.08, y: 0.07}
-      - {x: 0.055, y: 0.08}
---- !u!61 &61509173739075822
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144027855134740}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 5.19, y: 6.2}
+    - - {x: -1.035, y: -2.125}
+      - {x: -0.775, y: -1.9749999}
+      - {x: -0.375, y: -1.745}
+      - {x: -0.065, y: -1.5649999}
+      - {x: 0.125, y: -1.4549999}
+      - {x: 0.33499998, y: -1.3349999}
+      - {x: 0.59499997, y: -1.185}
+      - {x: 1.045, y: -0.92499995}
+      - {x: 1.305, y: -0.775}
+      - {x: 1.615, y: -0.59499997}
+      - {x: 1.755, y: -0.515}
+      - {x: 1.875, y: -0.445}
+      - {x: 2.065, y: -0.33499998}
+      - {x: 2.2749999, y: -0.21499999}
+      - {x: 2.585, y: -0.035}
+      - {x: 2.595, y: -0.015}
+      - {x: 2.595, y: 0.015}
+      - {x: 2.585, y: 0.035}
+      - {x: 2.415, y: 0.13499999}
+      - {x: 2.155, y: 0.285}
+      - {x: 1.9649999, y: 0.39499998}
+      - {x: 1.8249999, y: 0.475}
+      - {x: 1.7049999, y: 0.545}
+      - {x: 1.5649999, y: 0.625}
+      - {x: 1.4449999, y: 0.695}
+      - {x: 1.305, y: 0.775}
+      - {x: 1.185, y: 0.84499997}
+      - {x: 0.995, y: 0.955}
+      - {x: 0.85499996, y: 1.035}
+      - {x: 0.73499995, y: 1.105}
+      - {x: 0.59499997, y: 1.185}
+      - {x: 0.475, y: 1.255}
+      - {x: 0.33499998, y: 1.3349999}
+      - {x: 0.21499999, y: 1.405}
+      - {x: 0.024999999, y: 1.515}
+      - {x: -0.114999995, y: 1.5949999}
+      - {x: -0.235, y: 1.665}
+      - {x: -0.375, y: 1.745}
+      - {x: -0.49499997, y: 1.8149999}
+      - {x: -0.685, y: 1.925}
+      - {x: -0.825, y: 2.0049999}
+      - {x: -0.945, y: 2.075}
+      - {x: -1.0849999, y: 2.155}
+      - {x: -1.2049999, y: 2.225}
+      - {x: -1.345, y: 2.305}
+      - {x: -1.515, y: 2.395}
+      - {x: -1.535, y: 2.415}
+      - {x: -1.655, y: 2.485}
+      - {x: -1.795, y: 2.565}
+      - {x: -1.915, y: 2.635}
+      - {x: -2.055, y: 2.715}
+      - {x: -2.175, y: 2.7849998}
+      - {x: -2.315, y: 2.865}
+      - {x: -2.5449998, y: 2.995}
+      - {x: -2.595, y: 2.995}
+      - {x: -2.595, y: -2.995}
+      - {x: -2.565, y: -2.995}
+      - {x: -2.5249999, y: -2.985}
+      - {x: -2.455, y: -2.945}
+      - {x: -2.055, y: -2.715}
+      - {x: -1.485, y: -2.385}
 --- !u!114 &114374887953362146
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,8 +18,6 @@ public class CannonController : MonoBehaviour {
     public AudioClip clip;
 
     private AudioSource audioSource;
-    private Vector2 startPos;
-    private Transform thisTransform;
     private Vector2 inputDirection;
     private Vector2 velocityVector;
     public float angle;
@@ -40,8 +38,6 @@ public class CannonController : MonoBehaviour {
             bullets[i] = Instantiate(bullet, spawnerLocation.transform.position, spawnerLocation.transform.rotation);
         }
 
-        thisTransform = transform;
-        startPos = player.transform.position + 2 * thisTransform.position;
         Vector2 inputDirection = Vector2.zero;
         Vector2 velocityVector = Vector2.zero;
         audioSource = GetComponent<AudioSource>();

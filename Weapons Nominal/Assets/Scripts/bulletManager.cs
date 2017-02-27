@@ -5,28 +5,28 @@ using UnityEngine;
 public class bulletManager : MonoBehaviour
 {
  
-    private Transform thisTransform;
-    private Transform shipTransform;
-    private Vector2 startPos;
-    private Vector3 velocityVector;
-    private EnemyTest enemyScript;
+    //Manager bullet operations
+
+    private HitHandler enemyScript;
 
     public void start()
     {
-        thisTransform = transform;
-        startPos = thisTransform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate((Vector2.right + new Vector2(velocityVector.x * 50, velocityVector.y * 50)) * 4);
+        transform.Translate((Vector2.right) * 4);//move bullet
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)//when hitting something do things
     {
-        enemyScript = col.GetComponent<EnemyTest>();
-        enemyScript.newPosition();
+        if (col.GetComponent<HitHandler>())
+        {
+            enemyScript = col.GetComponent<HitHandler>();
+            enemyScript.Hit();
+        }
     }
 
 }

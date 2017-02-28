@@ -6,18 +6,35 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public int health;
-    public Text healthText;
+    public int initialHealth, health, invinsibilityFrames;
+    public GameObject healthBar;
+
+    private int invinsible;
+    private bool flash;
 //player container handler
     void Start()
     {
-        health = 20;
-        healthText.text = health.ToString();
+        health = initialHealth;
+        flash = true;
     }
 
     void Update()
     {
-        healthText.text = health.ToString();
+        if(invinsible > 0)
+        {
+            if (invinsible % 2 == 0)
+            {
+                flash = !flash;
+                GameObject.Find("Ship").GetComponent<SpriteRenderer>().enabled = flash;
+            }
+        }
+        else
+        {
+            GameObject.Find("Ship").GetComponent<SpriteRenderer>().enabled = true;
+        }
+        healthBar.transform.localScale = new Vector3(((float)health/(float)initialHealth),healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
+        invinsible--;
     }
 
     void OnTriggerEnter()//phsycal collisions with 3D objects
@@ -27,13 +44,17 @@ public class PlayerHandler : MonoBehaviour
 
     public void updateHealth()
     {
-        if(health>0)
+        if (invinsible <= 0)
         {
-            health--;
-        }
-        else
-        {
-            SceneManager.LoadScene(2);   
+            if (health > 1)
+            {
+                health--;
+            }
+            else
+            {
+                SceneManager.LoadScene("ThreePlayerScene");
+            }
+            invinsible = invinsibilityFrames;
         }
     }
 }

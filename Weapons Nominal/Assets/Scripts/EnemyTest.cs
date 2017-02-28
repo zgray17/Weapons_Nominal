@@ -35,7 +35,6 @@ public class EnemyTest : MonoBehaviour {
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;//turn the vector into an angle with MAAAAAATH
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);//math
         transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);//rotate enemy over time
-        //enemyContainerTransform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed;//rotate enemy over time
     }
 
     void OnTriggerEnter2D(Collider2D col)//if you hit something

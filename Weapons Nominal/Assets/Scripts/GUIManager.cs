@@ -17,11 +17,11 @@ public class GUIManager : MonoBehaviour {
 
     public void twoPlayer()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene("TwoPlayerScene");
     }
     public void threePlayer()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("ThreePlayerScene");
     }
     public void quit()
     {

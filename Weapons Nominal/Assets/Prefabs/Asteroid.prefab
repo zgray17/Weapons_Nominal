@@ -271,6 +271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLocation: {fileID: 0}
   spawnRate: 0.01
-  spawnRadius: 50
-  despawnRadius: 80
-  collisionRadius: 60
+  spawnRadius: 500
+  despawnRadius: 2000
+  collisionRadius: 100

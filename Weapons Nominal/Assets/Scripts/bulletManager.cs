@@ -22,10 +22,13 @@ public class bulletManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)//when hitting something do things
     {
-        if (col.GetComponent<HitHandler>())
+        if (GetComponent<SpriteRenderer>().isVisible)
         {
-            enemyScript = col.GetComponent<HitHandler>();
-            enemyScript.Hit();
+            if (col.GetComponent<HitHandler>())
+            {
+                enemyScript = col.GetComponent<HitHandler>();
+                enemyScript.Hit();
+            }
         }
     }
 

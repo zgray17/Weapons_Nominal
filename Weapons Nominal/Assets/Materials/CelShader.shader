@@ -11,6 +11,7 @@ Shader "Cel_shader Vol. 3" {
 		_Shininess("Shininess", Range(0.5,1)) = 1
 		_OutlineThickness("Outline Thickness", Range(0,1)) = 0.1
 		_MainTex("Main Texture", 2D) = "Asteroid_Texture" {}
+		_BumpMap("Normal Map", 2D) = "bump" { }
 
 	}
 

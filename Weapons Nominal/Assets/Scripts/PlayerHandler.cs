@@ -8,13 +8,16 @@ public class PlayerHandler : MonoBehaviour
 {
     public int initialHealth, health, invinsibilityFrames;
     public GameObject healthBar;
+    public Text scorePanel;
 
-    private int invinsible;
+    private int invinsible, score;
     private bool flash;
 //player container handler
     void Start()
     {
         health = initialHealth;
+        score = 0;
+        scorePanel.text = score.ToString();
         flash = true;
     }
 
@@ -56,5 +59,10 @@ public class PlayerHandler : MonoBehaviour
             }
             invinsible = invinsibilityFrames;
         }
+    }
+    public void updateScore()
+    {
+        score++;
+        scorePanel.text = score.ToString();
     }
 }

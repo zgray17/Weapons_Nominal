@@ -27,6 +27,7 @@ public class HitHandler : MonoBehaviour {
             case Type.EnemyA:
                 enemyAScript = GetComponent<EnemyTest>();
                 enemyAScript.newPosition();
+                GameObject.Find("Player").GetComponent<PlayerHandler>().updateScore();
                 break;
             case Type.EnemyB:
 

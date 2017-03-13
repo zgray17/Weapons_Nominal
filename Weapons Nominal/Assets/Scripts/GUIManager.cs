@@ -20,7 +20,7 @@ public class GUIManager : MonoBehaviour {
     }
     public void threePlayer()
     {
-        SceneManager.LoadScene("ThreePlayerScene");
+        LoadingScreenManager.LoadScene(2);
     }
     public void quit()
     {

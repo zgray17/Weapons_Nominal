@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+//Author:Zak Gray
 public class PlayerHandler : MonoBehaviour
 {
     public int initialHealth, health, invinsibilityFrames;
@@ -40,18 +40,21 @@ public class PlayerHandler : MonoBehaviour
         invinsible--;
     }
 
-    void OnTriggerEnter()//phsycal collisions with 3D objects
+    void OnTriggerEnter(Collider col)//phsycal collisions with 3D objects
     {
-        updateHealth();
+        if (col.gameObject.tag != "IgnoreCollider")
+        {
+            updateHealth(-1);
+        }
     }
 
-    public void updateHealth()
+    public void updateHealth(int healthUpdate)
     {
         if (invinsible <= 0)
         {
             if (health > 1)
             {
-                health--;
+                health+= healthUpdate;
             }
             else
             {

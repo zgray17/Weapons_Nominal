@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Author:Zak Gray
 public class bulletManager : MonoBehaviour
 {
  

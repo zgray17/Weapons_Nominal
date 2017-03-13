@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Author:ZakGray
 public class AsteroidTest : MonoBehaviour {
 
     //Control asteroids in the environment

@@ -1,6 +1,4 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
-// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
-
+﻿//Author:Zak Gray
 Shader "Cel_shader Vol. 3" {
 	Properties{
 		[MaterialToggle] _isToggled("isToggle", Float) = 0

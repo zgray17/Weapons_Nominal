@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Author:Zak Gray
 public class bulletManager : MonoBehaviour
 {
  
@@ -28,8 +28,10 @@ public class bulletManager : MonoBehaviour
             {
                 enemyScript = col.GetComponent<HitHandler>();
                 enemyScript.Hit();
+                transform.position = new Vector3(transform.position.x + 1000, transform.position.y + 1000);
             }
         }
+        
     }
 
 }

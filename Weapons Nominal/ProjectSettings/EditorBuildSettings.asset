@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+  - enabled: 1
+    path: Assets/Scenes/TwoPlayerSceneKeyboard.unity
+  - enabled: 1
     path: Assets/Scenes/TwoPlayerScene.unity
-  - enabled: 0
-    path: Assets/Scenes/ThreePlayerScene .unity
-  - enabled: 0
-    path: Assets/Scenes/ThreePlayerSceneTest.unity
   - enabled: 1
     path: Assets/Scenes/ThreePlayerScene.unity

@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 64249300555091668}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,7 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f98058ac346e724eb467c5a65e32103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 1774562970537250, guid: aad6c7edbad080547854843aa8b0e080,
+    type: 2}
   spawnRate: 0.01
   spawnRadius: 500
   despawnRadius: 2000

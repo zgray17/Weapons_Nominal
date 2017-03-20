@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Author:KM
 
-
-public enum Type { EnemyA, EnemyB, Object };//types of things bullets can interact with.
+public enum Type { EnemyA, EnemyB, Object, ParentAsteroid, ChildAsteroid };//types of things bullets can interact with.
 
 
 //Hit handler for anything that will be shot at
@@ -12,6 +12,8 @@ public class HitHandler : MonoBehaviour {
     public Type type;
 
     private EnemyTest enemyAScript;
+    private ParentAsteroidHandler pah;
+    private ChildAsteroidScript cas;
 
     void Start () {
 
@@ -24,17 +26,34 @@ public class HitHandler : MonoBehaviour {
     {
         switch (type)
         {
+            
             case Type.EnemyA:
                 enemyAScript = GetComponent<EnemyTest>();
                 enemyAScript.newPosition();
                 GameObject.Find("Player").GetComponent<PlayerHandler>().updateScore();
                 break;
-            case Type.EnemyB:
 
+            case Type.EnemyB:
+                
                 break;
+
             case Type.Object:
 
                 break;
+
+            case Type.ParentAsteroid:
+                pah = GetComponent<ParentAsteroidHandler>();
+                pah.spawnChildren();
+                pah.newPosition();
+                GameObject.Find("Player").GetComponent<PlayerHandler>().updateScore();
+                break;
+
+            case Type.ChildAsteroid:
+                GameObject.Find("Player").GetComponent<PlayerHandler>().updateScore();
+                cas = GetComponent<ChildAsteroidScript>();
+                cas.SelfDestruct();
+                break;
+
         }
     }
 }

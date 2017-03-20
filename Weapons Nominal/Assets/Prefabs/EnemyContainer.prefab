@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 4959805451919792}
   - component: {fileID: 54672012009339772}
   - component: {fileID: 135754648816230666}
-  - component: {fileID: 114374887953362146}
   m_Layer: 0
   m_Name: EnemyContainer
   m_TagString: Untagged
@@ -103,7 +102,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689188306577928}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0.05
   m_AngularDrag: 0.2
   m_UseGravity: 0
@@ -186,17 +185,6 @@ PolygonCollider2D:
       - {x: -2.455, y: -2.945}
       - {x: -2.055, y: -2.715}
       - {x: -1.485, y: -2.385}
---- !u!114 &114374887953362146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1689188306577928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cc491ccb39c2c6489cf7bee884f22e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114523355287645688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,7 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb681c939435af4898d8099894de78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  rotationSpeed: 1
+  speed: 0.2
   spawnRadius: 200
   despawnRadius: 400
   enemyContainer: {fileID: 1689188306577928}

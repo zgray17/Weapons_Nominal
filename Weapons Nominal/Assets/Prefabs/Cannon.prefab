@@ -111,6 +111,7 @@ MonoBehaviour:
   joystickVertical: LeftJoystickVertical
   joystickHorizontal: LeftJoystickHorizontal
   clip: {fileID: 0}
+  bulletForce: 30
   angle: 0
 --- !u!212 &212280984096331114
 SpriteRenderer:

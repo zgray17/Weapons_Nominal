@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Author:Zak Gray
 public class ShipHandler : MonoBehaviour {
     //ship prefab handler
     private PlayerHandler playerHandler;
@@ -17,8 +17,8 @@ public class ShipHandler : MonoBehaviour {
     {
  
     }
-    public void shipHit()
+    public void shipHit(int num)
     {
-        playerHandler.updateHealth();
+        playerHandler.updateHealth(num);
     }
 }

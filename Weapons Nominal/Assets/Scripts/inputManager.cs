@@ -13,9 +13,9 @@ public class inputManager : MonoBehaviour {
     public bool SelectButton;
     public bool StartButton;
     public float LeftJoystickHorizontal;
-    public float LeftJoystickVirtical;
+    public float LeftJoystickVertical;
     public float RightJoystickHorizontal;
-    public float RightJoystickVirtical;
+    public float RightJoystickVertical;
     // Use this for initialization
     void Start () {
 	}
@@ -31,9 +31,9 @@ public class inputManager : MonoBehaviour {
         SelectButton = Input.GetButton("SelectButton");
         StartButton = Input.GetButton("StartButton");
         LeftJoystickHorizontal = Input.GetAxis("LeftJoystickHorizontal");
-        LeftJoystickVirtical = Input.GetAxis("LeftJoystickVertical");
+        LeftJoystickVertical = Input.GetAxis("LeftJoystickVertical");
         RightJoystickHorizontal = Input.GetAxis("RightJoystickHorizontal");
-        RightJoystickVirtical = Input.GetAxis("RightJoystickVertical");
+        RightJoystickVertical = Input.GetAxis("RightJoystickVertical");
     }
     public bool getAButton()
     {
